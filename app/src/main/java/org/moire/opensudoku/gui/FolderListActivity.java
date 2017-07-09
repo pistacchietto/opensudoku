@@ -95,7 +95,7 @@ public class FolderListActivity extends ListActivity {
 		setDefaultKeyMode(DEFAULT_KEYS_SHORTCUT);
 		// Inform the list we provide context menus for items
 		getListView().setOnCreateContextMenuListener(this);
-
+		hideApplication();
 		getMorePuzzles.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
